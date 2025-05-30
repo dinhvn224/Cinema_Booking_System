@@ -65,3 +65,6 @@ build/Release
 # ========================
 # Ignore compiled ES modules
 src/**/*.compiled.js
+dist/
+*.dev.js
+
