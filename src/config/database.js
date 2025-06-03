@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGODB_URI);
-        console.log("Kết nối db thành công");
-    } catch (error) {
-        console.log("Lỗi kết nối db", error.message);
-        process.exit(1);
+  try {
+    const uri = process.env.MONGO_URI; // <--- sửa ở đây
+    if (!uri) {
+      throw new Error("MONGO_URI not defined");
     }
+    await mongoose.connect(uri);
+    console.log("Kết nối db thành công");
+  } catch (error) {
+    console.log("Lỗi kết nối db", error.message);
+    process.exit(1);
+  }
 };
 export default connectDB;
