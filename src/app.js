@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import router from "./routers";
+import router from "./routers/index.js";
 import morgan from "morgan";
-import connectDB from "./config/databases";
+import connectDB from "./config/database.js";
 dotenv.config();
 const app = express();
 connectDB();
@@ -16,5 +16,5 @@ app.use(morgan("dev"));
 app.use("/api", router);
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
