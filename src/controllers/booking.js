@@ -31,15 +31,15 @@ export const updateBooking = async (req, res) => {
 };
 
 // DELETE
-export const deleteBooking = async (req, res) => {
-  try {
-    const booking = await Booking.findByIdAndDelete(req.params.id);
-    if (!booking) return res.status(404).json({ error: "Không tìm thấy vé" });
-    res.json({ message: "Xóa vé thành công" });
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-};
+// export const deleteBooking = async (req, res) => {
+//   try {
+//     const booking = await Booking.findByIdAndDelete(req.params.id);
+//     if (!booking) return res.status(404).json({ error: "Không tìm thấy vé" });
+//     res.json({ message: "Xóa vé thành công" });
+//   } catch (err) {
+//     res.status(400).json({ error: err.message });
+//   }
+// };
 
 // GET ALL
 export const getBookings = async (req, res) => {
