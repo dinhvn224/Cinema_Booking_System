@@ -62,7 +62,7 @@ export const getMovies = async (req, res) => {
 export const getMovieById = async (req, res) => {
   try {
     const movie = await Movie.findById(req.params.id);
-    if (!movie) return res.status(404).json({ error: "Movie not found" });
+    if (!movie) return res.status(404).json({ error: "Không tìm thấy phim" });
     res.json(movie);
   } catch (err) {
     res.status(400).json({ error: err.message });

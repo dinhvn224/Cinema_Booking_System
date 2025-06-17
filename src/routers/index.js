@@ -1,8 +1,11 @@
 import express from "express";
 import routeAuth from "./auth";
 import routeMovie from "./movie";
-
+import routeBooking from "./booking";
+import routeShowtime from "./showtime";
 const router = express.Router();
 router.use("/auth", routeAuth);
-router.use("/movies", routeMovie)
+router.use("/movies", routeMovie);
+router.use("/showtime", routeShowtime);
+router.use("/booking", routeBooking);
 export default router;
