@@ -472,16 +472,6 @@ Content-Type: application/json
 }
 ```
 
-#### Xóa booking (Admin)
-```http
-DELETE /api/booking/665f1f...
-Authorization: Bearer <admin_token>
-```
-**Response:**
-```json
-{
-  "message": "Xóa booking thành công"
-}
 ```
 
 ---
