@@ -48,6 +48,7 @@ export const getBookings = async (req, res) => {
         path: "showtimeId",
         populate: { path: "movieId", select: "title genre" }, // lấy cả thông tin phim trong showtime
       });
+      const total = await Booking.countDocuments();
     res.json({
       data: bookings,
       total,

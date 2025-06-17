@@ -1,0 +1,233 @@
+{
+  "info": {
+    "_postman_id": "cinema-booking-collection",
+    "name": "Cinema Booking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Đăng ký",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nguyen Van A\",\n  \"email\": \"a@gmail.com\",\n  \"password\": \"12345678\",\n  \"phone\": \"0912345678\",\n  \"role\": \"user\",\n  \"avatar\": \"https://i.pravatar.cc/150?img=1\",\n  \"addresses\": [\n    { \"street\": \"123 Đường ABC\", \"city\": \"Hà Nội\", \"isDefault\": true }\n  ]\n}"
+            },
+            "url": { "raw": "{{host}}/auth/signup", "host": ["{{host}}"], "path": ["auth", "signup"] }
+          }
+        },
+        {
+          "name": "Đăng nhập",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"a@gmail.com\",\n  \"password\": \"12345678\"\n}"
+            },
+            "url": { "raw": "{{host}}/auth/signin", "host": ["{{host}}"], "path": ["auth", "signin"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Movie",
+      "item": [
+        {
+          "name": "Tạo phim mới",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Avengers\",\n  \"description\": \"Superhero movie\",\n  \"duration\": 120,\n  \"genre\": \"Action\",\n  \"director\": \"Joss Whedon\",\n  \"cast\": [\"Robert Downey Jr.\", \"Chris Evans\"]\n}"
+            },
+            "url": { "raw": "{{host}}/movies", "host": ["{{host}}"], "path": ["movies"] }
+          }
+        },
+        {
+          "name": "Lấy danh sách phim",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{host}}/movies", "host": ["{{host}}"], "path": ["movies"] }
+          }
+        },
+        {
+          "name": "Lấy chi tiết phim",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{host}}/movies/{{movieId}}", "host": ["{{host}}"], "path": ["movies", "{{movieId}}"] }
+          }
+        },
+        {
+          "name": "Cập nhật phim",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Avengers: Endgame\",\n  \"duration\": 180\n}"
+            },
+            "url": { "raw": "{{host}}/movies/{{movieId}}", "host": ["{{host}}"], "path": ["movies", "{{movieId}}"] }
+          }
+        },
+        {
+          "name": "Xóa phim",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{host}}/movies/{{movieId}}", "host": ["{{host}}"], "path": ["movies", "{{movieId}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Showtime",
+      "item": [
+        {
+          "name": "Tạo suất chiếu mới",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": \"{{movieId}}\",\n  \"room\": \"A1\",\n  \"startTime\": \"2025-06-12T10:00:00.000Z\"\n}"
+            },
+            "url": { "raw": "{{host}}/showtime", "host": ["{{host}}"], "path": ["showtime"] }
+          }
+        },
+        {
+          "name": "Lấy danh sách suất chiếu",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{host}}/showtime", "host": ["{{host}}"], "path": ["showtime"] }
+          }
+        },
+        {
+          "name": "Lấy chi tiết suất chiếu",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": { "raw": "{{host}}/showtime/{{showtimeId}}", "host": ["{{host}}"], "path": ["showtime", "{{showtimeId}}"] }
+          }
+        },
+        {
+          "name": "Cập nhật suất chiếu",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"room\": \"A2\"\n}"
+            },
+            "url": { "raw": "{{host}}/showtime/{{showtimeId}}", "host": ["{{host}}"], "path": ["showtime", "{{showtimeId}}"] }
+          }
+        },
+        {
+          "name": "Xóa suất chiếu",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{host}}/showtime/{{showtimeId}}", "host": ["{{host}}"], "path": ["showtime", "{{showtimeId}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Booking",
+      "item": [
+        {
+          "name": "Tạo booking mới",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"showtimeId\": \"{{showtimeId}}\",\n  \"seats\": [\"A1\", \"A2\"]\n}"
+            },
+            "url": { "raw": "{{host}}/booking", "host": ["{{host}}"], "path": ["booking"] }
+          }
+        },
+        {
+          "name": "Lấy danh sách booking",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{host}}/booking", "host": ["{{host}}"], "path": ["booking"] }
+          }
+        },
+        {
+          "name": "Lấy chi tiết booking",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{host}}/booking/{{bookingId}}", "host": ["{{host}}"], "path": ["booking", "{{bookingId}}"] }
+          }
+        },
+        {
+          "name": "Cập nhật booking",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"cancelled\"\n}"
+            },
+            "url": { "raw": "{{host}}/booking/{{bookingId}}", "host": ["{{host}}"], "path": ["booking", "{{bookingId}}"] }
+          }
+        },
+        {
+          "name": "Xóa booking",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{host}}/booking/{{bookingId}}", "host": ["{{host}}"], "path": ["booking", "{{bookingId}}"] }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "host", "value": "http://localhost:8000/api" },
+    { "key": "token", "value": "" },
+    { "key": "movieId", "value": "" },
+    { "key": "showtimeId", "value": "" },
+    { "key": "bookingId", "value": "" },
+    { "key": "userId", "value": "" }
+  ]
+}
