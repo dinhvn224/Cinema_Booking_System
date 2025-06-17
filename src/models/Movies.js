@@ -14,7 +14,7 @@ const movieSchema = new mongoose.Schema(
     },
     genre: {
       //thể loại
-      type: String,
+      type: [String],
       required: true,
     },
     director: String,
