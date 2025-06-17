@@ -9,7 +9,7 @@
 - [📁 Cấu trúc thư mục](#-cấu-trúc-thư-mục)
 - [🔐 Phân quyền API](#-phân-quyền-api)
 - [📡 Mô tả API](#-mô-tả-api)
-- [🧪 Kiểm thử - Ví dụ request/response](#-kiểm-thử---ví-dụ-requestresponse)
+- [🧪 Kiểm thử](#-kiểm-thử)
 - [👤 Tài khoản mẫu](#-tài-khoản-mẫu)
 - [📚 Tài liệu tham khảo & công cụ hỗ trợ](#-tài-liệu-tham-khảo--công-cụ-hỗ-trợ)
 
@@ -114,7 +114,7 @@ Chi tiết request/response đầy đủ nằm trong phần tiếp theo.
 ---
 
 ## 🧪 Kiểm thử 
-## Ví dụ request/response cho tất cả API
+## request/response cho tất cả API
 ---
 
 ### 🔐 Auth
