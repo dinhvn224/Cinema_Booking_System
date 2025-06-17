@@ -115,78 +115,77 @@ Chi tiết request/response đầy đủ nằm trong phần tiếp theo.
 
 ## 🧪 Kiểm thử 
 ## Ví dụ request/response cho tất cả API
-
 ---
 
 ### 🔐 Auth
 
 #### Đăng ký tài khoản
-http
+```http
 POST /api/auth/signup
 Content-Type: application/json
-
-json
+```
+```json
 {
-  "name": "Vu Van A",
-  "email": "vva@gmail.com",
+  "name": "Nguyen Van A",
+  "email": "user1@gmail.com",
   "password": "12345678",
   "phone": "0912345678",
   "role": "user",
   "avatar": "https://i.pravatar.cc/150?img=1",
   "addresses": ["123 Đường ABC, Hà Nội"]
 }
-
+```
 **Response:**
-json
+```json
 {
   "message": "Đăng ký thành công",
   "data": {
     "_id": "665f1b...",
-    "name": "Vu Van A",
-    "email": "vva@gmail.com",
+    "name": "Nguyen Van A",
+    "email": "user1@gmail.com",
     "phone": "0912345678",
     "role": "user",
     "avatar": "https://i.pravatar.cc/150?img=1",
     "addresses": ["123 Đường ABC, Hà Nội"]
   }
 }
-
+```
 
 #### Đăng nhập
-http
+```http
 POST /api/auth/signin
 Content-Type: application/json
-
-json
+```
+```json
 {
-  "email": "vva@gmail.com",
+  "email": "user1@gmail.com",
   "password": "12345678"
 }
-
+```
 **Response:**
-json
+```json
 {
   "message": "Đăng nhập thành công",
   "token": "<JWT_TOKEN>",
   "user": {
     "_id": "665f1b...",
-    "name": "Vu Van A",
-    "email": "vva@gmail.com",
+    "name": "Nguyen Van A",
+    "email": "user1@gmail.com",
     "role": "user"
   }
 }
-
+```
 
 ---
 
 ### 🎬 Movie
 
 #### Lấy danh sách phim
-http
+```http
 GET /api/movies
-
+```
 **Response:**
-json
+```json
 {
   "data": [
     {
@@ -204,14 +203,14 @@ json
   "page": 1,
   "limit": 10
 }
-
+```
 
 #### Lấy chi tiết phim
-http
+```http
 GET /api/movies/665f1c...
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1c...",
   "title": "Avengers",
@@ -221,15 +220,15 @@ json
   "director": "Joss Whedon",
   "cast": ["Robert Downey Jr.", "Chris Evans"]
 }
-
+```
 
 #### Thêm phim (Admin)
-http
+```http
 POST /api/movies
 Authorization: Bearer <admin_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "title": "Inception",
   "description": "Mind-bending thriller",
@@ -238,9 +237,9 @@ json
   "director": "Christopher Nolan",
   "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"]
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1d...",
   "title": "Inception",
@@ -250,21 +249,21 @@ json
   "director": "Christopher Nolan",
   "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"]
 }
-
+```
 
 #### Cập nhật phim (Admin)
-http
+```http
 PUT /api/movies/665f1d...
 Authorization: Bearer <admin_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "title": "Inception (2010)"
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1d...",
   "title": "Inception (2010)",
@@ -274,30 +273,30 @@ json
   "director": "Christopher Nolan",
   "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"]
 }
-
+```
 
 #### Xóa phim (Admin)
-http
+```http
 DELETE /api/movies/665f1d...
 Authorization: Bearer <admin_token>
-
+```
 **Response:**
-json
+```json
 {
   "message": "Xóa phim thành công"
 }
-
+```
 
 ---
 
 ### 🕒 Showtime
 
 #### Lấy danh sách suất chiếu
-http
+```http
 GET /api/showtime
-
+```
 **Response:**
-json
+```json
 {
   "data": [
     {
@@ -312,89 +311,89 @@ json
   "page": 1,
   "limit": 10
 }
-
+```
 
 #### Lấy chi tiết suất chiếu
-http
+```http
 GET /api/showtime/665f1e...
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1e...",
   "movieId": "665f1c...",
   "room": "A1",
   "startTime": "2025-06-12T10:00:00.000Z"
 }
-
+```
 
 #### Thêm suất chiếu (Admin)
-http
+```http
 POST /api/showtime
 Authorization: Bearer <admin_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "movieId": "665f1c...",
   "room": "A1",
   "startTime": "2025-06-12T10:00:00.000Z"
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1e...",
   "movieId": "665f1c...",
   "room": "A1",
   "startTime": "2025-06-12T10:00:00.000Z"
 }
-
+```
 
 #### Cập nhật suất chiếu (Admin)
-http
+```http
 PUT /api/showtime/665f1e...
 Authorization: Bearer <admin_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "room": "A2"
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1e...",
   "movieId": "665f1c...",
   "room": "A2",
   "startTime": "2025-06-12T10:00:00.000Z"
 }
-
+```
 
 #### Xóa suất chiếu (Admin)
-http
+```http
 DELETE /api/showtime/665f1e...
 Authorization: Bearer <admin_token>
-
+```
 **Response:**
-json
+```json
 {
   "message": "Xóa suất chiếu thành công"
 }
-
+```
 
 ---
 
 ### 🎟️ Booking
 
 #### Lấy tất cả booking
-http
+```http
 GET /api/booking
 Authorization: Bearer <token>
-
+```
 **Response:**
-json
+```json
 {
   "data": [
     {
@@ -410,15 +409,15 @@ json
   "page": 1,
   "limit": 10
 }
-
+```
 
 #### Lấy chi tiết booking
-http
+```http
 GET /api/booking/665f1f...
 Authorization: Bearer <token>
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1f...",
   "userId": "665f1b...",
@@ -426,22 +425,22 @@ json
   "seats": ["A1", "A2"],
   "status": "booked"
 }
-
+```
 
 #### Đặt vé (User)
-http
+```http
 POST /api/booking
 Authorization: Bearer <user_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "showtimeId": "665f1e...",
   "seats": ["A1", "A2"]
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1f...",
   "userId": "665f1b...",
@@ -449,21 +448,21 @@ json
   "seats": ["A1", "A2"],
   "status": "booked"
 }
-
+```
 
 #### Cập nhật booking (Admin)
-http
+```http
 PUT /api/booking/665f1f...
 Authorization: Bearer <admin_token>
 Content-Type: application/json
-
-json
+```
+```json
 {
   "status": "cancelled"
 }
-
+```
 **Response:**
-json
+```json
 {
   "_id": "665f1f...",
   "userId": "665f1b...",
@@ -471,23 +470,19 @@ json
   "seats": ["A1", "A2"],
   "status": "cancelled"
 }
-
+```
 
 #### Xóa booking (Admin)
-http
+```http
 DELETE /api/booking/665f1f...
 Authorization: Bearer <admin_token>
-
+```
 **Response:**
-json
+```json
 {
   "message": "Xóa booking thành công"
 }
-
-
----
-
-
+```
 
 ---
 
