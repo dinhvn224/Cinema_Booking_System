@@ -21,28 +21,33 @@ Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và
 Node.js >= 16.x
 
 MongoDB (local hoặc MongoDB Atlas)
-
+```markdown
 pnpm hoặc npm
+```
 
 🚀 Cài đặt & Chạy dự án
 
 1. Clone dự án
-   
+```markdown
 git clone https://github.com/dinhvn224/Cinema_Booking_System.git
 
 cd Cinema_Booking_System
+```
 
 2. Cài đặt package
+```markdown
    
 pnpm install
 
 hoặc
 
 npm install
+```
 
 3. Thiết lập môi trường .env
    
 Tạo file .env trong thư mục gốc:
+```markdown
 
 PORT=8000
 
@@ -51,18 +56,19 @@ MONGO_URI=mongodb://localhost:27017/Cinema-Booking
 JWT_SECRET=cinema_secret_key  //Token được tạo ra khi đăng nhập, xác minh bằng JWT
 
 JWT_EXPRIES_IN=3d   //Thiết lập thời gian hết hạn cho token JWT
-
+```
 4. Chạy server
-   
+```markdown
 pnpm dev
 
 hoặc
-npm run dev 
+npm run dev
+```
 
 API sẽ chạy tại: http://localhost:8000/api
 
 📁 Cấu trúc thư mục
-
+```markdown
 src/
 
 ├── app.js                 # Điểm khởi đầu
@@ -82,6 +88,7 @@ src/
 note/
 
 └── cinema_booking.postman_collection.json  # Collection cho Postman
+```
 
 📡 Mô tả API
 
@@ -136,14 +143,18 @@ Token sẽ hiển thị ra khi đăng nhập
 🧪 Import Collection Postman
 
 Import file sau vào Postman để thử nhanh các API:
+```markdown
 
 note/cinema_booking.postman_collection.json
+```
 
 📚 Tài liệu tham khảo & công cụ hỗ trợ
+```markdown
 
 Blog Nodejs/MongoDB Thầy Đạt: https://letrongdat.vercel.app/nodejs/
 
 Công cụ hỗ trợ: Github, ChatGPT, VSCode, MongoDB, Postman
+```
 
 Vũ Như Định
 
