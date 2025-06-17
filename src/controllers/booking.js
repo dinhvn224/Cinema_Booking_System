@@ -3,7 +3,12 @@ import Booking from "../models/Booking.js";
 // CREATE
 export const createBooking = async (req, res) => {
   try {
-    const booking = new Booking(req.body);
+     const booking = new Booking({
+      userId: req.user._id,
+      showtimeId: req.body.showtimeId,
+      seats: req.body.seats,
+      status: req.body.status // nếu muốn cho phép truyền status, hoặc bỏ dòng này nếu không
+    });
     await booking.save();
     res.status(201).json(booking);
   } catch (err) {
