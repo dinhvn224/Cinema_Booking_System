@@ -1,22 +1,22 @@
-🎬 Cinema Booking System
+**🎬 Cinema Booking System**
 
-📖 Giới thiệu
+**📖 Giới thiệu**
 
-Cinema Booking System là một hệ thống quản lý vé xem phim với các chức năng:
+``Cinema Booking System là một hệ thống quản lý vé xem phim với các chức năng:``
 
-Quản lý người dùng & phân quyền (User/Admin)
+``Quản lý người dùng & phân quyền (User/Admin)``
 
-CRUD phim và suất chiếu
+``CRUD phim và suất chiếu``
 
-Chức năng đặt vé
+``Chức năng đặt vé``
 
-Xác thực bảo mật với JWT
+``Xác thực bảo mật với JWT``
 
-Validate dữ liệu đầu vào bằng Joi
+``Validate dữ liệu đầu vào bằng Joi``
 
-Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và môi trường phát triển với Babel, Nodemon, dotenv.
+``Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và môi trường phát triển với Babel, Nodemon, dotenv.``
 
-⚙️ Yêu cầu hệ thống
+**⚙️ Yêu cầu hệ thống**
 
 Node.js >= 16.x
 
@@ -25,7 +25,7 @@ MongoDB (local hoặc MongoDB Atlas)
 pnpm hoặc npm
 ```
 
-🚀 Cài đặt & Chạy dự án
+**🚀 Cài đặt & Chạy dự án**
 
 1. Clone dự án
 ```markdown
@@ -67,7 +67,7 @@ npm run dev
 
 API sẽ chạy tại: http://localhost:8000/api
 
-📁 Cấu trúc thư mục
+**📁 Cấu trúc thư mục**
 ```markdown
 src/
 
@@ -90,7 +90,7 @@ note/
 └── cinema_booking.postman_collection.json  # Collection cho Postman
 ```
 
-📡 Mô tả API
+**📡 Mô tả API**
 
 
 ```markdown
@@ -149,7 +149,7 @@ Import file sau vào Postman để thử nhanh các API:
 note/cinema_booking.postman_collection.json
 ```
 
-📚 Tài liệu tham khảo & công cụ hỗ trợ
+**📚 Tài liệu tham khảo & công cụ hỗ trợ**
 ```markdown
 
 Blog Nodejs/MongoDB Thầy Đạt: https://letrongdat.vercel.app/nodejs/
