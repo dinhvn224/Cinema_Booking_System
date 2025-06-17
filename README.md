@@ -92,7 +92,6 @@ note/
 
 **📡 Mô tả API**
 
-
 ```markdown
 🔐 Auth
 
@@ -100,6 +99,26 @@ Phương thức   Endpoint             Mô tả
 ---------     -------------------  -------------------------
 POST         /api/auth/signup      Đăng ký tài khoản
 POST         /api/auth/signin      Đăng nhập, nhận token
+
+Account mẫu kiểm thử:
+//signup
+{
+  "name": "Tran Van Nam",
+  "email": "nam@gmail.com",
+  "password": "12345678",
+  "phone": "0912345678",
+  "role": "user",
+  "avatar": "https://i.pravatar.cc/150?img=1",
+  "addresses": [
+    { "street": "123 Đường ABC", "city": "Hà Nội", "isDefault": true }
+  ]
+}
+//signin
+{
+   "email": "nam@gmail.com",
+   "password": "12345678"
+}
+
 
 🎬 Movie
 
