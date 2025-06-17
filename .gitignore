@@ -1,0 +1,70 @@
+# ========================
+# 📦 NODE / JS DEFAULTS
+# ========================
+node_modules/
+.env
+.env.*
+dist/
+build/
+*.log
+*.tgz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+coverage/
+.nyc_output
+lib-cov
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_*/
+.node_repl_history
+.vscode/
+.idea/
+
+# ========================
+# 🚧 BUILD / TRANSPILE
+# ========================
+*.dev.js
+*.test.js
+build/Release
+
+# ========================
+# 💡 TOOLS / FRAMEWORKS
+# ========================
+.parcel-cache
+.nuxt
+.next
+.vuepress/dist
+.temp
+.docusaurus
+.serverless/
+.webpack/
+.fusebox/
+.dynamodb/
+.tern-port
+
+# ========================
+# 💬 YARN V2 / PNP
+# ========================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ========================
+# 🧪 TESTING (optional)
+# ========================
+.vscode-test
+
+# ========================
+# ========================
+# Ignore compiled ES modules
+src/**/*.compiled.js
+dist/
+*.dev.js
+
