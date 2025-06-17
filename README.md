@@ -16,6 +16,7 @@ Import Collection Postman
 Tài liệu tham khảo & công cụ hỗ trợ
 
 📖 Giới thiệu
+
 Cinema Booking System là một hệ thống quản lý vé xem phim với các chức năng:
 
 Quản lý người dùng & phân quyền (User/Admin)
@@ -31,6 +32,7 @@ Validate dữ liệu đầu vào bằng Joi
 Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và môi trường phát triển với Babel, Nodemon, dotenv.
 
 ⚙️ Yêu cầu hệ thống
+
 Node.js >= 16.x
 
 MongoDB (local hoặc MongoDB Atlas)
@@ -38,23 +40,40 @@ MongoDB (local hoặc MongoDB Atlas)
 pnpm hoặc npm
 
 🚀 Cài đặt & Chạy dự án
+
 1. Clone dự án
+   
 git clone https://github.com/dinhvn224/Cinema_Booking_System.git
+
 cd Cinema_Booking_System
-2. Cài đặt package
+
+3. Cài đặt package
+   
 pnpm install
-# hoặc
+
+hoặc
+
 npm install
+
 3. Thiết lập môi trường .env
+   
 Tạo file .env trong thư mục gốc:
+
 PORT=8000
+
 MONGO_URI=mongodb://localhost:27017/Cinema-Booking
+
 JWT_SECRET=cinema_secret_key  //Token được tạo ra khi đăng nhập, xác minh bằng JWT
+
 JWT_EXPRIES_IN=3d   //Thiết lập thời gian hết hạn cho token JWT
-4. Chạy server
+
+5. Chạy server
+   
 pnpm dev
-# hoặc
+
+hoặc
 npm run dev 
+
 API sẽ chạy tại: http://localhost:8000/api
 
 📁 Cấu trúc thư mục
@@ -69,47 +88,75 @@ src/
 ├── validation/            # Định nghĩa Joi schema
 note/
 └── cinema_booking.postman_collection.json  # Collection cho Postman
+
 📡 Mô tả API
+
 🔐 Auth
+
 Phương thức	Endpoint	Mô tả
+
 POST	/api/auth/signup	Đăng ký tài khoản
+
 POST	/api/auth/signin	Đăng nhập, nhận token
 
 🎬 Movie
+
 Phương thức	Endpoint	Mô tả
+
 GET	/api/movies	Lấy danh sách phim
+
 GET	/api/movies/:id	Chi tiết phim
+
 POST	/api/movies	(Admin) Thêm phim
+
 PUT	/api/movies/:id	(Admin) Cập nhật phim
+
 DELETE	/api/movies/:id	(Admin) Xóa phim
 
 🕒 Showtime
+
 Phương thức	Endpoint	Mô tả
+
 GET	/api/showtime	Lấy danh sách suất chiếu
+
 GET	/api/showtime/:id	Chi tiết suất chiếu
+
 POST	/api/showtime	(Admin) Thêm suất chiếu
+
 PUT	/api/showtime/:id	(Admin) Cập nhật suất chiếu
+
 DELETE	/api/showtime/:id	(Admin) Xóa suất chiếu
 
 🎟️ Booking
+
 Phương thức	Endpoint	Mô tả
+
 GET	/api/booking	Lấy tất cả booking
+
 GET	/api/booking/:id	Chi tiết booking
+
 POST	/api/booking	(User) Đặt vé
+
 PUT	/api/booking/:id	(Admin) Cập nhật booking
+
 DELETE	/api/booking/:id	(Admin) Xóa booking
 
 Một số route yêu cầu xác thực qua header:
+
 Authorization: Bearer <JWT Token>
+
 Token sẽ hiển thị ra khi đăng nhập
 
 🧪 Import Collection Postman
+
 Import file sau vào Postman để thử nhanh các API:
 
 note/cinema_booking.postman_collection.json
 
 📚 Tài liệu tham khảo & công cụ hỗ trợ
+
 Blog Nodejs/MongoDB Thầy Đạt: https://letrongdat.vercel.app/nodejs/
+
 Công cụ hỗ trợ: Github, ChatGPT, VSCode, MongoDB, Postman
 
 Vũ Như Định
