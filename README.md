@@ -150,12 +150,11 @@ note/cinema_booking.postman_collection.json
 ```
 
 **📚 Tài liệu tham khảo & công cụ hỗ trợ**
-```markdown
 
-Blog Nodejs/MongoDB Thầy Đạt: https://letrongdat.vercel.app/nodejs/
+-[Blog Nodejs/MongoDB Thầy Đạt:](https://letrongdat.vercel.app/nodejs/)
 
-Công cụ hỗ trợ: Github, ChatGPT, VSCode, MongoDB, Postman
-```
+-Công cụ hỗ trợ: Github, ChatGPT, VSCode, MongoDB, Postman
+
 
 Vũ Như Định
 
