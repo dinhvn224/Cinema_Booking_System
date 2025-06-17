@@ -79,17 +79,27 @@ API sẽ chạy tại: http://localhost:8000/api
 📁 Cấu trúc thư mục
 
 src/
+
 ├── app.js                 # Điểm khởi đầu
+
 ├── configs/               # Cấu hình kết nối DB, JWT, ...
+
 ├── controllers/           # Logic xử lý các endpoint
+
 ├── middleware/            # Auth middleware, error handler
+
 ├── models/                # Mongoose schemas (User, Movie, Showtime, Booking)
+
 ├── routers/               # Route định tuyến
+
 ├── validation/            # Định nghĩa Joi schema
+
 note/
+
 └── cinema_booking.postman_collection.json  # Collection cho Postman
 
 📡 Mô tả API
+
 
 🔐 Auth
 
@@ -98,6 +108,8 @@ Phương thức	Endpoint	Mô tả
 POST	/api/auth/signup	Đăng ký tài khoản
 
 POST	/api/auth/signin	Đăng nhập, nhận token
+
+
 
 🎬 Movie
 
@@ -113,6 +125,8 @@ PUT	/api/movies/:id	(Admin) Cập nhật phim
 
 DELETE	/api/movies/:id	(Admin) Xóa phim
 
+
+
 🕒 Showtime
 
 Phương thức	Endpoint	Mô tả
@@ -127,6 +141,8 @@ PUT	/api/showtime/:id	(Admin) Cập nhật suất chiếu
 
 DELETE	/api/showtime/:id	(Admin) Xóa suất chiếu
 
+
+
 🎟️ Booking
 
 Phương thức	Endpoint	Mô tả
@@ -140,6 +156,8 @@ POST	/api/booking	(User) Đặt vé
 PUT	/api/booking/:id	(Admin) Cập nhật booking
 
 DELETE	/api/booking/:id	(Admin) Xóa booking
+
+
 
 Một số route yêu cầu xác thực qua header:
 
