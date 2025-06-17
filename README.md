@@ -135,9 +135,10 @@ DELETE       /api/booking/:id      (Admin) Xóa booking
 
 
 Một số route yêu cầu xác thực qua header:
+```markdown
 
 Authorization: Bearer <JWT Token>
-
+```
 Token sẽ hiển thị ra khi đăng nhập
 
 🧪 Import Collection Postman
