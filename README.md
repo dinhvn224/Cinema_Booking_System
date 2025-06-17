@@ -1,19 +1,4 @@
 🎬 Cinema Booking System
-Mục lục
-
-Giới thiệu
-
-Yêu cầu hệ thống
-
-Cài đặt & Chạy dự án
-
-Cấu trúc thư mục
-
-Mô tả API
-
-Import Collection Postman
-
-Tài liệu tham khảo & công cụ hỗ trợ
 
 📖 Giới thiệu
 
