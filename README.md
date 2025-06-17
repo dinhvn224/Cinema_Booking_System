@@ -4,17 +4,17 @@
 
 ``Cinema Booking System là một hệ thống quản lý vé xem phim với các chức năng:``
 
-``Quản lý người dùng & phân quyền (User/Admin)``
+``-Quản lý người dùng & phân quyền (User/Admin)``
 
-``CRUD phim và suất chiếu``
+``-CRUD phim và suất chiếu``
 
-``Chức năng đặt vé``
+``-Chức năng đặt vé``
 
-``Xác thực bảo mật với JWT``
+``-Xác thực bảo mật với JWT``
 
-``Validate dữ liệu đầu vào bằng Joi``
+``-Validate dữ liệu đầu vào bằng Joi``
 
-``Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và môi trường phát triển với Babel, Nodemon, dotenv.``
+``-Dự án sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose) và môi trường phát triển với Babel, Nodemon, dotenv.``
 
 **⚙️ Yêu cầu hệ thống**
 
@@ -101,7 +101,9 @@ POST         /api/auth/signup      Đăng ký tài khoản
 POST         /api/auth/signin      Đăng nhập, nhận token
 
 Account mẫu kiểm thử:
+
 //signup
+
 {
   "name": "Tran Van Nam",
   "email": "nam@gmail.com",
@@ -113,7 +115,9 @@ Account mẫu kiểm thử:
     { "street": "123 Đường ABC", "city": "Hà Nội", "isDefault": true }
   ]
 }
+
 //signin
+
 {
    "email": "nam@gmail.com",
    "password": "12345678"
