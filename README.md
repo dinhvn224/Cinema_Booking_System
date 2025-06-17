@@ -32,7 +32,7 @@ git clone https://github.com/dinhvn224/Cinema_Booking_System.git
 
 cd Cinema_Booking_System
 
-3. Cài đặt package
+2. Cài đặt package
    
 pnpm install
 
@@ -52,7 +52,7 @@ JWT_SECRET=cinema_secret_key  //Token được tạo ra khi đăng nhập, xác 
 
 JWT_EXPRIES_IN=3d   //Thiết lập thời gian hết hạn cho token JWT
 
-5. Chạy server
+4. Chạy server
    
 pnpm dev
 
