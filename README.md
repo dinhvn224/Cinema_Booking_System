@@ -86,61 +86,44 @@ note/
 📡 Mô tả API
 
 
+```markdown
 🔐 Auth
 
-Phương thức	Endpoint	Mô tả
-
-POST	/api/auth/signup	Đăng ký tài khoản
-
-POST	/api/auth/signin	Đăng nhập, nhận token
-
-
+Phương thức   Endpoint             Mô tả
+---------     -------------------  -------------------------
+POST         /api/auth/signup      Đăng ký tài khoản
+POST         /api/auth/signin      Đăng nhập, nhận token
 
 🎬 Movie
 
-Phương thức	Endpoint	Mô tả
-
-GET	/api/movies	Lấy danh sách phim
-
-GET	/api/movies/:id	Chi tiết phim
-
-POST	/api/movies	(Admin) Thêm phim
-
-PUT	/api/movies/:id	(Admin) Cập nhật phim
-
-DELETE	/api/movies/:id	(Admin) Xóa phim
-
-
+Phương thức   Endpoint             Mô tả
+---------     -------------------  -------------------------
+GET          /api/movies           Lấy danh sách phim
+GET          /api/movies/:id       Chi tiết phim
+POST         /api/movies           (Admin) Thêm phim
+PUT          /api/movies/:id       (Admin) Cập nhật phim
+DELETE       /api/movies/:id       (Admin) Xóa phim
 
 🕒 Showtime
 
-Phương thức	Endpoint	Mô tả
-
-GET	/api/showtime	Lấy danh sách suất chiếu
-
-GET	/api/showtime/:id	Chi tiết suất chiếu
-
-POST	/api/showtime	(Admin) Thêm suất chiếu
-
-PUT	/api/showtime/:id	(Admin) Cập nhật suất chiếu
-
-DELETE	/api/showtime/:id	(Admin) Xóa suất chiếu
-
-
+Phương thức   Endpoint             Mô tả
+---------     -------------------  -------------------------
+GET          /api/showtime         Lấy danh sách suất chiếu
+GET          /api/showtime/:id     Chi tiết suất chiếu
+POST         /api/showtime         (Admin) Thêm suất chiếu
+PUT          /api/showtime/:id     (Admin) Cập nhật suất chiếu
+DELETE       /api/showtime/:id     (Admin) Xóa suất chiếu
 
 🎟️ Booking
 
-Phương thức	Endpoint	Mô tả
-
-GET	/api/booking	Lấy tất cả booking
-
-GET	/api/booking/:id	Chi tiết booking
-
-POST	/api/booking	(User) Đặt vé
-
-PUT	/api/booking/:id	(Admin) Cập nhật booking
-
-DELETE	/api/booking/:id	(Admin) Xóa booking
+Phương thức   Endpoint             Mô tả
+---------     -------------------  -------------------------
+GET          /api/booking          Lấy tất cả booking
+GET          /api/booking/:id      Chi tiết booking
+POST         /api/booking          (User) Đặt vé
+PUT          /api/booking/:id      (Admin) Cập nhật booking
+DELETE       /api/booking/:id      (Admin) Xóa booking
+```
 
 
 
