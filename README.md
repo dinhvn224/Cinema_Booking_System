@@ -31,7 +31,7 @@ Cinema Booking System là một hệ thống quản lý vé xem phim với các 
 
 ---
 ## 📚 Tài liệu tham khảo & công cụ hỗ trợ
-
+- [Phân tích thiết kế kệ thống](https://doc.clickup.com/9018870668/p/h/8ct22wc-3218/1d8534414a749d7)
 - [Blog Nodejs/MongoDB Thầy Đạt](https://letrongdat.vercel.app/nodejs/)
 - Công cụ: Github, ChatGPT, VSCode, MongoDB, Postman
 
