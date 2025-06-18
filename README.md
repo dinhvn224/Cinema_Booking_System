@@ -66,7 +66,7 @@ Tạo file `.env` tại thư mục gốc:
 ```env
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/Cinema-Booking
-JWT_SECRET=cinema_secret_key
+JWT_SECRET=cinema_secret_key_324!@
 JWT_EXPRIES_IN=3d
 ```
 
