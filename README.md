@@ -4,6 +4,7 @@
 ## 📑 Mục lục
 
 - [📖 Giới thiệu](#-giới-thiệu)
+- [📚 Tài liệu tham khảo & công cụ hỗ trợ](#-tài-liệu-tham-khảo--công-cụ-hỗ-trợ)
 - [⚙️ Yêu cầu hệ thống](#️-yêu-cầu-hệ-thống)
 - [🚀 Cài đặt & Chạy dự án](#-cài-đặt--chạy-dự-án)
 - [📁 Cấu trúc thư mục](#-cấu-trúc-thư-mục)
@@ -11,7 +12,7 @@
 - [📡 Mô tả API](#-mô-tả-api)
 - [🧪 Kiểm thử](#-kiểm-thử)
 - [👤 Tài khoản mẫu](#-tài-khoản-mẫu)
-- [📚 Tài liệu tham khảo & công cụ hỗ trợ](#-tài-liệu-tham-khảo--công-cụ-hỗ-trợ)
+
 
 ---
 
@@ -25,6 +26,14 @@ Cinema Booking System là một hệ thống quản lý vé xem phim với các 
 - Xác thực bảo mật với JWT  
 - Validate dữ liệu đầu vào bằng Joi  
 - Sử dụng Node.js, Express.js, MongoDB (kết nối qua Mongoose), Babel, Nodemon, dotenv  
+
+---
+
+---
+## 📚 Tài liệu tham khảo & công cụ hỗ trợ
+
+- [Blog Nodejs/MongoDB Thầy Đạt](https://letrongdat.vercel.app/nodejs/)
+- Công cụ: Github, ChatGPT, VSCode, MongoDB, Postman
 
 ---
 
@@ -486,10 +495,6 @@ Content-Type: application/json
 ---
 ---
 ```
-## 📚 Tài liệu tham khảo & công cụ hỗ trợ
-
-- [Blog Nodejs/MongoDB Thầy Đạt](https://letrongdat.vercel.app/nodejs/)
-- Công cụ: Github, ChatGPT, VSCode, MongoDB, Postman
 
 
 **Vũ Như Định**  
